@@ -16,7 +16,7 @@ const AuthProvider = ({ children }) => {
       setUser(response.data);
       return response.data;
     } catch (error) {
-      throw error; // Rethrow to be handled by the component using this context
+      throw error; 
     }
   };
 
@@ -29,7 +29,7 @@ const AuthProvider = ({ children }) => {
       setUser(response.data);
       return response.data;
     } catch (error) {
-      throw error; // Rethrow to be handled by the component using this context
+      throw error; 
     }
   };
 
