@@ -12,12 +12,12 @@ const authSlice = createSlice({
     setToken: (state, action) => {
       state.token = action.payload;
       state.isAuthenticated = true;
-      localStorage.setItem('token', action.payload); // Store token in localStorage
+      localStorage.setItem('token', action.payload); 
     },
     clearToken: (state) => {
       state.token = null;
       state.isAuthenticated = false;
-      localStorage.removeItem('token'); // Remove token from localStorage
+      localStorage.removeItem('token'); 
     },
   },
 });
