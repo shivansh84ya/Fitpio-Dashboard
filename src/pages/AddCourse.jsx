@@ -12,12 +12,10 @@ const AddCourse = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
-    // Fetch instructors from the backend
     const fetchInstructors = async () => {
       try {
         const response = await axios.get('http://localhost:5000/api/v2/instructors');
         setInstructors(response.data);
-        // console.log("omnssssssssssssss",instructors);
       } catch (error) {
         console.error('Error fetching instructors:', error);
       }
@@ -34,7 +32,7 @@ const AddCourse = () => {
       type: courseType,
       description: disc,
       duration: duration,
-      instructorId: instructors, // Ensure this matches the server-side expectation
+      instructorId: instructors,
     };
   
     console.log('Submitting course data:', courseData);
